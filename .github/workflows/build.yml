@@ -22,7 +22,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: target/*.jar
+          path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*.jar
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
