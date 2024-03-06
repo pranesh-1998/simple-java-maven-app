@@ -25,3 +25,6 @@ jobs:
           name: my-artifact
           path: ./src
 
+      - name: Copy Artifact to src Directory
+        run: cp -r ./src src/
+
