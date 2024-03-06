@@ -29,16 +29,16 @@ jobs:
 
    
 
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Other steps (e.g., build, test)
-
-      - name: Download the release artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: my-artifact
-          path: target/
+  #deploy:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - name: Checkout code
+  #      uses: actions/checkout@v2
+#
+#      # Other steps (e.g., build, test)
+#
+ #     - name: Download the release artifact
+  #      uses: actions/download-artifact@v2
+  #      with:
+   #       name: my-artifact
+    #      path: target/
