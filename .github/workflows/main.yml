@@ -25,7 +25,7 @@ jobs:
         run: mkdir -p target
 
       - name: Copy JAR artifact to target
-        run: cp target/my-app-1.0-SNAPSHOT.jar target/
+        run: mv target/my-app-1.0-SNAPSHOT.jar target/
 
    
 
