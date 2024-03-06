@@ -17,14 +17,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: .
+          path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/src
 
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: ./src
+          path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/src
 
       - name: Copy Artifact to src Directory
-        run: cp -r ./src src/
+        run: cp -r /home/runner/work/simple-java-maven-app/simple-java-maven-app/src src/
 
