@@ -26,5 +26,5 @@ jobs:
           path: .
 
       - name: Copy Artifact to src Directory
-        run: cp -r . simple-java-maven-app/jenkins//
+        run: cp -r . simple-java-maven-app/jenkins/
 
