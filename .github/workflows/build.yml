@@ -17,14 +17,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: /home/runner/.m2/repository/com/mycompany/app/my-app/1.0-SNAPSHOT/my-app-1.0-SNAPSHOT.jar
+          path: .
 
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: /home/runner/.m2/repository/com/mycompany/app/my-app/1.0-SNAPSHOT/my-app-1.0-SNAPSHOT.jar
+          path: .
 
       - name: Copy Artifact to src Directory
-        run: cp -r /home/runner/.m2/repository/com/mycompany/app/my-app/1.0-SNAPSHOT/my-app-1.0-SNAPSHOT.jar ./
+        run: cp -r . simple-java-maven-app/jenkins//
 
