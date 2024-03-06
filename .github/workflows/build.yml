@@ -19,23 +19,4 @@ jobs:
           name: my-artifact
           path: my-artifact.jar
           
-#      - name: Download a Build Artifact
-#       uses: actions/download-artifact@v2
-#        with:
-#          name: my-artifact
-#          path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*.jar
-
-#      - name: Upload artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: my-artifact
-#          path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*.jar
-
-      - name: Upload artifact to root directory
-        run: |
-          curl -X PUT \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -d '{"message": "Upload artifact to root directory", "content": "'$(base64 my-artifact.jar)'"}' \
-            "https://api.github.com/repos/${{ github.repository }}/contents/my-artifact.jar"
 
