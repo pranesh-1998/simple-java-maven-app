@@ -26,5 +26,5 @@ jobs:
           path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/src
 
       - name: Copy Artifact to src Directory
-        run: cp -r /home/runner/work/simple-java-maven-app/simple-java-maven-app/src src/
+        run: cp -r /home/runner/work/simple-java-maven-app/simple-java-maven-app/src ./
 
