@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Copy the Dockerfile into the workspace if it's not already there
-                    sh 'cp /Dockerfile .'
+                    // sh 'cp /Dockerfile .'
                     
                     // Navigate to the correct directory before building the Docker image
                     sh 'docker build -t ${DOCKER_IMAGE} .'
