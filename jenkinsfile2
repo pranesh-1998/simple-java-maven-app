@@ -1,0 +1,23 @@
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.9.3-eclipse-temurin-17'
+            args '-v $HOME/.m2:/root/.m2'
+        }
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }  
+
+        stage('Build docker image') {
+                steps {
+                    sh "sudo docker build -t pranesh-1998/java-maven-app:${BUILD_NUMBER} ."
+                }
+        }
+
+    }
+}
