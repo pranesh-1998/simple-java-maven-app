@@ -14,6 +14,10 @@ pipeline {
         }
 
         stage('Build and Push Docker Image') {
+            docker {
+                image 'node:20.11.1-alpine3.19'
+            }
+ 
             environment {
                 DOCKER_IMAGE = "pranesh1998/java-maven-cicd:${env.BUILD_NUMBER}"
                 REGISTRY_CREDENTIALS = credentials('docker-cred')
@@ -38,6 +42,10 @@ pipeline {
         }
 
         stage('Run Docker Container') {
+            docker {
+                image 'node:20.11.1-alpine3.19'
+            }
+ 
             steps {
                 script {
                     // Run the Docker container on port 8081
